@@ -1,0 +1,20 @@
+name: Close unanswered
+on:
+  schedule: [{ cron: '0 6 * * *' }]
+  workflow_dispatch:
+permissions:
+  issues: write
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          only-labels: needs info
+          days-before-stale: 14
+          days-before-close: 7
+          stale-issue-label: stale
+          stale-issue-message: This is still waiting on details from the reporter. It closes in 7 days unless someone replies.
+          close-issue-message: Closed for lack of information. Reply with the missing details and we'll reopen it.
+          days-before-pr-stale: -1
+          exempt-issue-labels: known,working on,fixed
