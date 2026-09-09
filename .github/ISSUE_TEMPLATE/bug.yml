@@ -1,26 +1,75 @@
-name: Bug report
-description: Something in KURV is broken
+name: 🐞 Bug report
+description: KURV does something wrong (sound, UI, presets, automation)
 labels: [bug]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Search [open issues](https://github.com/Matari-Audio/KURV-issues/issues) first — if yours is already there, add a 👍 and any extra detail as a comment.
   - type: input
     id: version
-    attributes: { label: KURV version, placeholder: "0.20.6" }
-    validations: { required: true }
-  - type: input
-    id: host
-    attributes: { label: DAW and version, placeholder: "REAPER 7.30" }
-    validations: { required: true }
-  - type: dropdown
-    id: os
-    attributes: { label: OS, options: [Windows, macOS, Linux] }
+    attributes:
+      label: KURV version
+      description: Shown in the settings panel and in the installer name.
+      placeholder: "0.20.6"
     validations: { required: true }
   - type: dropdown
     id: format
-    attributes: { label: Plugin format, options: [VST3, CLAP, AU] }
+    attributes:
+      label: Plugin format(s)
+      description: Pick every format where you saw it.
+      multiple: true
+      options: [VST3, CLAP, AU, Standalone, Not sure]
+    validations: { required: true }
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      options: [Windows 11, Windows 10, macOS (Apple Silicon), macOS (Intel), Linux]
+    validations: { required: true }
+  - type: input
+    id: host
+    attributes:
+      label: DAW and version
+      placeholder: "REAPER 7.30, FL Studio 24.2, Ableton Live 12.1, Bitwig 5.3…"
+    validations: { required: true }
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where does it happen?
+      multiple: true
+      options: [Sound / DSP, User interface, Presets / preset browser, Modulation / automation, Loading / installing / activation, Performance / CPU, MIDI / MPE, Something else]
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often?
+      options: [Every time, Often, Rarely, Happened once]
   - type: textarea
     id: steps
-    attributes: { label: Steps to reproduce }
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Load KURV on a MIDI track
+        2. Open preset "…"
+        3. Turn knob "…"
     validations: { required: true }
   - type: textarea
     id: expected
-    attributes: { label: What you expected vs what happened }
+    attributes:
+      label: What you expected, and what actually happened
+    validations: { required: true }
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments
+      description: |
+        Drag files here. Most useful, in order:
+        - Screen recording or screenshot
+        - The `.kurvy` preset that shows it (zip it first, GitHub blocks unknown extensions)
+        - Audio example
+        - A minimal DAW project
+  - type: input
+    id: firstseen
+    attributes:
+      label: Did this work in an earlier KURV version? Which one?
+      placeholder: "Worked in 0.20.4"

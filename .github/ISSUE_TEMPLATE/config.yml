@@ -1,1 +1,11 @@
 blank_issues_enabled: false
+contact_links:
+  - name: ❓ Question or help
+    url: https://github.com/Matari-Audio/KURV-issues/discussions
+    about: Not sure it's a bug? Ask here.
+  - name: 📖 Manual
+    url: https://matari-audio.com/kurv
+    about: Press F1 inside KURV for the built-in manual, or read it online.
+  - name: 🔑 Activation and license problems
+    url: https://matari-audio.com/activate?productId=kurv
+    about: Licensing issues go through the site, not the public tracker.

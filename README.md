@@ -1,8 +1,26 @@
 # KURV issue tracker
 
-Public bug reports and feature requests for [KURV](https://matari.audio).
+Public bug reports and feature requests for [KURV](https://matari-audio.com/kurv) by Matari Audio.
 
-- **Report a bug or request a feature:** [New issue](https://github.com/Matari-Audio/KURV-issues/issues/new/choose)
-- **See what's known, in progress, and fixed:** [Status board](https://github.com/orgs/Matari-Audio/projects/2)
+| I want to… | Go here |
+|---|---|
+| Report a bug | [🐞 Bug report](https://github.com/Matari-Audio/KURV-issues/issues/new?template=bug.yml) |
+| Report a crash or "KURV won't load" | [💥 Crash report](https://github.com/Matari-Audio/KURV-issues/issues/new?template=crash.yml) |
+| Ask for a feature | [💡 Feature request](https://github.com/Matari-Audio/KURV-issues/issues/new?template=feature.yml) |
+| Ask a question | [Discussions](https://github.com/Matari-Audio/KURV-issues/discussions) |
+| See what's known, in progress, and fixed | [Status board](https://github.com/orgs/Matari-Audio/projects/2) |
+| Vote for something | 👍 the issue. Sorted by reactions [here](https://github.com/Matari-Audio/KURV-issues/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc). |
 
-Fixed issues are closed when the fix ships in a release. Check the release notes for the version that includes it.
+## How issues move
+
+`Known` → `Working on` → `Fixed`. A fixed issue stays open until the fix is in a public release, then it's closed with the version number in the last comment.
+
+## Labels
+
+| Label | Meaning |
+|---|---|
+| `bug` `crash` `enhancement` | What kind of report |
+| `area: dsp` `area: ui` `area: presets` `area: modulation` `area: install` `area: performance` `area: midi` | Which part of KURV |
+| `os: windows` `os: macos` `os: linux` | Platform-specific |
+| `needs info` | Waiting on the reporter |
+| `duplicate` `wontfix` | Closed without a change |

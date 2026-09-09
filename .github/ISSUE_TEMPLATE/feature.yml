@@ -1,11 +1,27 @@
-name: Feature request
+name: 💡 Feature request
 description: Something you wish KURV did
 labels: [enhancement]
 body:
+  - type: markdown
+    attributes:
+      value: Check the [status board](https://github.com/orgs/Matari-Audio/projects/2) first — it may already be planned. 👍 the existing issue to vote.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options: [Sound / DSP, User interface, Presets / preset browser, Modulation / automation, MIDI / MPE, Workflow, Something else]
   - type: textarea
     id: what
     attributes: { label: What would you like KURV to do? }
     validations: { required: true }
   - type: textarea
     id: why
-    attributes: { label: What are you trying to make or solve with it? }
+    attributes:
+      label: What are you trying to make or solve?
+      description: The problem behind the request helps more than the exact solution.
+  - type: textarea
+    id: refs
+    attributes:
+      label: Examples or references
+      description: Another plugin that does it, a sketch, a sound example.

@@ -1,0 +1,45 @@
+name: 💥 Crash or won't load
+description: KURV crashes the DAW, hangs, or doesn't appear in the plugin list
+labels: [bug, crash]
+body:
+  - type: input
+    id: version
+    attributes: { label: KURV version, placeholder: "0.20.6" }
+    validations: { required: true }
+  - type: dropdown
+    id: format
+    attributes:
+      label: Plugin format(s)
+      multiple: true
+      options: [VST3, CLAP, AU, Standalone, Not sure]
+    validations: { required: true }
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      options: [Windows 11, Windows 10, macOS (Apple Silicon), macOS (Intel), Linux]
+    validations: { required: true }
+  - type: input
+    id: host
+    attributes: { label: DAW and version, placeholder: "FL Studio 24.2" }
+    validations: { required: true }
+  - type: dropdown
+    id: when
+    attributes:
+      label: When does it happen?
+      options: [Plugin scan / not listed in DAW, Opening the plugin, Opening the editor window, Loading a preset or project, While playing, Closing the plugin or DAW, Randomly]
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes: { label: Steps to reproduce }
+    validations: { required: true }
+  - type: textarea
+    id: logs
+    attributes:
+      label: Diagnostics log
+      description: |
+        KURV writes a log per instance. Zip and drag the newest `kurv-*.log` from:
+        - **Windows:** `%LOCALAPPDATA%\Derpcat\KURV\Diagnostics`
+        - **macOS:** `~/Library/Logs/KURV`
+        - **Linux:** `~/.local/state/kurv`
+        On macOS also attach the crash report from Console → Crash Reports if there is one.
