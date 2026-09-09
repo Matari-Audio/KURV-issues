@@ -1,0 +1,11 @@
+name: Feature request
+description: Something you wish KURV did
+labels: [enhancement]
+body:
+  - type: textarea
+    id: what
+    attributes: { label: What would you like KURV to do? }
+    validations: { required: true }
+  - type: textarea
+    id: why
+    attributes: { label: What are you trying to make or solve with it? }

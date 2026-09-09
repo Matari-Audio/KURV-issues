@@ -1,0 +1,26 @@
+name: Bug report
+description: Something in KURV is broken
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes: { label: KURV version, placeholder: "0.20.6" }
+    validations: { required: true }
+  - type: input
+    id: host
+    attributes: { label: DAW and version, placeholder: "REAPER 7.30" }
+    validations: { required: true }
+  - type: dropdown
+    id: os
+    attributes: { label: OS, options: [Windows, macOS, Linux] }
+    validations: { required: true }
+  - type: dropdown
+    id: format
+    attributes: { label: Plugin format, options: [VST3, CLAP, AU] }
+  - type: textarea
+    id: steps
+    attributes: { label: Steps to reproduce }
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: What you expected vs what happened }
